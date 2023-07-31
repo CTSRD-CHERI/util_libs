@@ -151,6 +151,10 @@ if("${KernelSel4Arch}" STREQUAL "arm_hyp")
     set(_inc_folder_KernelSel4Arch "aarch32")
 endif()
 
+if("${KernelSel4Arch}" STREQUAL "morello")
+    set(_inc_folder_KernelSel4Arch "aarch64")
+endif()
+
 target_include_directories(
     platsupport
     PUBLIC
